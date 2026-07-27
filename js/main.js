@@ -2,32 +2,14 @@
 // IBISQ TECTONIC — Custom Landing Page JS
 // ==========================================
 
-// 1. Navigation Sticky & Active Link Highlight
+// 1. Navigation Sticky & Sticky Class
 const header = document.getElementById('main-header');
 const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('section[id]');
 
 window.addEventListener('scroll', () => {
   if (header) {
     header.classList.toggle('scrolled', window.scrollY > 50);
   }
-
-  // Highlight active nav link on scroll
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 140;
-    const sectionHeight = section.offsetHeight;
-    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href').includes(current)) {
-      link.classList.add('active');
-    }
-  });
 });
 
 // 2. Mobile Menu Toggle
