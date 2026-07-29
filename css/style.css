@@ -1336,3 +1336,32 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.45rem); letter-spacing: -0.01em; }
   }
 }
 
+/* RTL Typography Overrides to ensure premium Cairo font is applied uniformly */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] button,
+[dir="rtl"] input,
+[dir="rtl"] select,
+[dir="rtl"] textarea,
+[dir="rtl"] .logo-text,
+[dir="rtl"] .hero-tagline,
+[dir="rtl"] .service-card-title,
+[dir="rtl"] .service-label,
+[dir="rtl"] .btn,
+[dir="rtl"] .nav-link,
+[dir="rtl"] .footer-col-title,
+[dir="rtl"] .tip-body h3,
+[dir="rtl"] .offer-box-text h3,
+[dir="rtl"] .faq-trigger {
+  font-family: 'Cairo', system-ui, sans-serif !important;
+}
+
+[dir="rtl"] .faq-trigger {
+  text-align: right;
+}
+
+
